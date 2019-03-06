@@ -1,4 +1,4 @@
-require "json"
+require "yajl"
 require "time"
 require "date"
 require "logstash/namespace"
@@ -66,7 +66,7 @@ class LogStash::Event
   module ClassMethods
     public
     def from_json(json)
-      return self.new(JSON.parse(json))
+      return self.new(Yajl.load(json))
     end # def from_json
   end
 
@@ -166,7 +166,7 @@ class LogStash::Event
 
   public
   def to_json(*args)
-    return @data.to_json(*args) 
+    return Yajl.dump(@data, *args)
   end # def to_json
 
   def to_hash
