@@ -18,8 +18,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_runtime_dependency 'logstash-event', '~> 1.2'
-
   gem.add_development_dependency 'rails'
   gem.add_development_dependency 'redis'
   gem.add_development_dependency 'poseidon'
@@ -36,4 +34,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'wwtd'
   gem.add_development_dependency 'appraisal'
   gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'insist', '1.0.0'
+  gem.add_development_dependency 'guard'
+  gem.add_development_dependency 'guard-rspec'
 end
