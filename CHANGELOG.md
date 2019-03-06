@@ -1,3 +1,7 @@
+## 0.27.0
+
+ - Merge in logstash-event and change the default JSON library to Yajl
+
 ## 0.26.1
 
  - Fix: Support for SSL with the TCP device without an SSL context in Ruby
